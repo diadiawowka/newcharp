@@ -1,8 +1,19 @@
 ﻿
-// Задача кол-во цифр в числе(исправить без строк!!)
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число 
+// и на выходе показывает вторую цифру этого числа.
+
 // Console.Write("Введите число ");
 // string N = Console.ReadLine();
 // Console.Write(N.Length);
+
+
+// Задача 10: 2-й вар
+
+// Console.Write("Введите число ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int result = num/10%10;
+
+// Console.WriteLine(result);
 
 
 //задача 30
