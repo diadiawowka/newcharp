@@ -126,28 +126,16 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.Write("Enter a number A: ");
-int numA = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter a number B: ");
-int numB = Convert.ToInt32(Console.ReadLine());
-int x = 0;
-int res = numB;
-while (x <= numB)
-{
-
-    res = numA*numA;
-    Console.WriteLine($"{x} -> {res}");
-    x++;
-}
-
-
-
-
-
-
-
-
-
+// Console.Write("Enter a number A: ");
+// int numA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter a number B: ");
+// int numB = Convert.ToInt32(Console.ReadLine());
+// int x = numA;
+// for (int i = 1; i < numB; i++)
+// {
+//     x = x*numA;
+// }
+// Console.WriteLine(x);
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -155,7 +143,78 @@ while (x <= numB)
 // 82 -> 10
 // 9012 -> 12
 
+// Console.Write("Enter a number: ");
+// int num = Convert.ToInt32(Console.ReadLine());;
+// int sum = 0;
+// while(num > 0)
+// {
+//     sum += num % 10;
+//     num /= 10;
+//  }
+// Console.WriteLine(sum);
+
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
+
+// int[] array = new int[8];
+
+// for (int i = 0; i<array.Length; i++)
+// {
+//     array[i] = new Random().Next(0,9);
+//     Console.Write($"{array[i]}, ");
+// }
+
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
+
+//   if ((num%2)==0)
+//         {mas[i]=num;
+//         i++;
+
+void FillArray(int[] collection)
+{
+    int lenght = collection.Length;
+    int index = 0;
+    while (index < lenght)
+    {
+        collection[index] = new Random().Next(1, 10);
+        index++;
+
+    }
+    int count = 0;
+    int num = 0;
+    if ((collection[index]%2)==0)
+        {
+            collection[index]=num;
+            count++;
+        }
+
+}
+void PrintArray(int[]col)
+{
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
+    {
+        Console.Write($"{col[position]} ");
+        position++;
+    }
+}
+
+int[] array = new int [10];
+FillArray(array);
+PrintArray(array);
+
+Console.WriteLine(array);
+
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
